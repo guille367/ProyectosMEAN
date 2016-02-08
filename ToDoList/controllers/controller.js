@@ -40,3 +40,17 @@ app.controller('Ctroller',function($scope, localStorageService){
     }
     
 });
+
+app.controller('ControllerWatcheado',function($scope){
+    
+    $scope.Attr1 = "Primer Valor";
+    $scope.Attr2 = "Segundo Valor";
+    
+    setTimeout(function(){
+    $scope.$apply(function(){
+    $scope.Attr1 = "1Er Valor";
+    $scope.Attr2 = "2Do Valor";    
+    });
+    },"2000");
+    
+});
